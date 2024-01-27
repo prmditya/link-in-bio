@@ -72,6 +72,7 @@ body {
 }
 .container-bio p {
   text-align: justify;
+  margin-top: 10px;
 }
 .container-btn {
   display: grid;
@@ -89,12 +90,12 @@ button {
   border-radius: 10px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   border: none;
-  transition: background-color 500ms, box-shadow 500ms;
+  transition: background 500ms, box-shadow 500ms;
 }
 
 button:hover {
   cursor: pointer;
-  transition: ease background-color 500ms, box-shadow 500ms;
+  transition: ease background 500ms, box-shadow 500ms;
 }
 
 .btn-mail:hover {
@@ -122,9 +123,14 @@ button:hover {
   box-shadow: 0px 8px 15px rgba(202, 178, 251, 0.5);
 }
 
+.btn-web:hover {
+  background-color: rgb(214, 214, 214);
+  box-shadow: 0px 8px 15px rgba(214, 214, 214, 0.5);
+}
+
 .container-footer {
   padding: 30px 0 30px 0;
-  color: var(--overlay-color);
+  color: #525565d9;
   text-align: center;
 }
 
