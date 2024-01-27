@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ditya</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Other CSS -->
     <link
       rel="stylesheet"
@@ -18,83 +19,57 @@
   </head>
   <body>
     <div class="container">
-      <div class="terminal-head">
-        <div class="circle-1"></div>
-        <div class="circle-2"></div>
-        <div class="circle-3"></div>
+      <div class="container-profile">
+        <img src="./assets/profile.JPG" alt="" width="80" />
+        <h1 id="typed-text"></h1>
       </div>
-      <div class="terminal-screen">
-        <div class="row row-1">
-          <i class="devicon-windows8-original"></i>
-          <span class="terminal-text">
-            <span class="terminal-username">riq</span>:<span
-              class="terminal-accent"
-              >~$</span
-            >
-          </span>
-          <img src="assets/profile.JPG" alt="me" width="100px" />
-        </div>
-        <div class="row row-2">
-          <i class="devicon-windows8-original"></i>
-          <span class="terminal-text">
-            <span class="terminal-username">riq</span>:<span
-              class="terminal-accent"
-              >~$</span
-            >
-          </span>
-          <p>
-            Hello everyone my name is Thoriq Kusuma Paramaditya, Here's my contact if you want to reach me out!!
-          </p>
-        </div>
-        <div class="row row-3">
-          <i class="devicon-windows8-original"></i>
-          <span class="terminal-text">
-            <span class="terminal-username">riq</span>:<span
-              class="terminal-accent"
-              >~$</span
-            >
-          </span>
-          <a href="mailto:thoriqk2@gmail.com"
-            ><i class="bi bi-envelope-fill"></i> Email</a
-          >
-        </div>
-        <div class="row row-4">
-          <i class="devicon-windows8-original"></i>
-          <span class="terminal-text">
-            <span class="terminal-username">riq</span>:<span
-              class="terminal-accent"
-              >~$</span
-            >
-          </span>
-          <a href="https://www.linkedin.com/in/paramaditya/"
-            ><i class="bi bi-linkedin"></i> LinkedIn</a
-          >
-        </div>
-        <div class="row row-5">
-          <i class="devicon-windows8-original"></i>
-          <span class="terminal-text">
-            <span class="terminal-username">riq</span>:<span
-              class="terminal-accent"
-              >~$</span
-            >
-          </span>
-          <a href="https://github.com/prmditya"
-            ><i class="bi bi-github"></i> GitHub</a
-          >
-        </div>
-        <div class="row row-6">
-          <i class="devicon-windows8-original"></i>
-          <span class="terminal-text">
-            <span class="terminal-username">riq</span>:<span
-              class="terminal-accent"
-              >~$</span
-            >
-          </span>
-          <a href="https://www.instagram.com/riqparamaditya/"
-            ><i class="bi bi-instagram"></i> Instagram</a
-          >
-        </div>
+      <hr />
+      <div class="container-bio">
+        <p>
+          Hey there!👋 I'm Thoriq Kusuma Paramaditya, a Computer Engineering
+          student'22. I'm passionate about coding and technology, constantly
+          exploring new opportunities to sharpen my skills. Beside of coding I
+          also like photograph, designing, gaming, and more.
+        </p>
+      </div>
+      <hr />
+      <div class="container-btn">
+        <button
+          class="btn-mail"
+          onclick="redirectTo('mailto:thoriqk2@gmail.com')"
+        >
+          <i class="bi bi-envelope-at"></i> Mail
+        </button>
+        <button
+          class="btn-linkedin"
+          onclick="redirectTo('https://www.linkedin.com/in/paramaditya/')"
+        >
+          <i class="bi bi-linkedin"></i> Linkedin
+        </button>
+        <button
+          class="btn-github"
+          onclick="redirectTo('https://github.com/prmditya')"
+        >
+          <i class="bi bi-github"></i> GitHub
+        </button>
+        <button
+          class="btn-insta"
+          onclick="redirectTo('https://www.instagram.com/riqparamaditya/')"
+        >
+          <i class="bi bi-instagram"></i> Instagram
+        </button>
+        <button class="btn-discord" onclick="redirectTo()">
+          <i class="bi bi-discord"></i> Discord
+        </button>
+        <button class="btn-web" onclick="redirectTo()">
+          <i class="bi bi-browser-safari"></i> Personal Web
+        </button>
+      </div>
+      <hr />
+      <div class="container-footer">
+        &copy; 2024 Thoriq Kusuma, All Right Reserved
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

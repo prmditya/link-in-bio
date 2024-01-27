@@ -2,11 +2,11 @@
 
 :root {
   --primary-color: #1e1e2e;
-  --text-color: #cdd6f4;
+  --text-color: #1e1e2e;
   --link-color: #f9e2af;
   --accent-color: #eba0ac;
   --terminal-symbol: #74c7ec;
-  --overlay-color: #6c7086;
+  --overlay-color: #6c7086ae;
   --red: #f38ba8;
   --green: #a6e3a1;
 }
@@ -24,9 +24,19 @@ a {
   color: var(--link-color);
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(56, 56, 56, 0.1),
+    rgba(56, 56, 56, 0.75),
+    rgba(56, 56, 56, 0.1)
+  );
+}
+
 body {
   height: 100vh;
-  background: url(assets/initial-d.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -35,110 +45,98 @@ body {
 }
 
 .container {
-  max-width: 500px;
-  margin: auto;
+  width: 640px;
+  height: 100vh;
+  padding: 30px 30px 30px 30px;
 }
 
-.terminal-head {
-  background-color: var(--overlay-color);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 70%);
-  height: 20px;
-  max-width: 500px;
-  border-radius: 15px 15px 0 0;
-  padding: 2.5px 10px;
-}
-
-.circle-1,
-.circle-2,
-.circle-3 {
-  display: inline-block;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-}
-.circle-1 {
-  background-color: var(--red);
-}
-.circle-2 {
-  background-color: var(--link-color);
-}
-.circle-3 {
-  background-color: var(--green);
-}
-
-.terminal-screen {
-  background-color: rgb(30, 30, 46, 70%);
-  backdrop-filter: blur(10px) saturate(130%);
-  border: solid 2px var(--overlay-color);
-  border-top: none;
-  border-radius: 0 0 15px 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 70%);
-  max-width: 500px;
-  height: 600px;
-  margin: auto;
-  padding: 20px 20px;
-}
-.terminal-screen .row {
+.container-profile {
   display: flex;
-  gap: 5px;
-  align-items: flex-start;
+  align-items: baseline;
   margin-bottom: 15px;
-  opacity: 0;
 }
 
-.row-1 {
-  animation: fade 3s 0s forwards;
+.container-profile img {
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.container-profile h1 {
+  width: 100%;
+  align-self: center;
+  padding: 20px;
 }
 
-.row-2 {
-  animation: fade 3s 1.5s forwards;
+.container-bio {
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+.container-bio p {
+  text-align: justify;
+}
+.container-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 30px 0 30px 0;
+  box-sizing: border-box;
 }
 
-.row-3 {
-  animation: fade 3s 2.5s forwards;
+button {
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: background-color 500ms, box-shadow 500ms;
 }
 
-.row-4 {
-  animation: fade 3s 3.5s forwards;
+button:hover {
+  cursor: pointer;
+  transition: ease background-color 500ms, box-shadow 500ms;
 }
 
-.row-5 {
-  animation: fade 3s 4.5s forwards;
+.btn-mail:hover {
+  background-color: rgb(243, 139, 168);
+  box-shadow: 0px 8px 15px rgba(243, 139, 168, 0.5);
 }
 
-.row-6 {
-  animation: fade 3s 5.5s forwards;
+.btn-linkedin:hover {
+  background-color: rgb(116, 199, 236);
+  box-shadow: 0px 8px 15px rgba(116, 199, 236, 0.5);
 }
 
-.terminal-screen .row i {
-  font-size: 12px;
+.btn-github:hover {
+  background-color: rgb(152, 152, 163);
+  box-shadow: 0px 8px 15px rgba(152, 152, 163, 0.5);
 }
 
-.terminal-screen .row .terminal-username {
-  color: var(--accent-color);
-}
-.terminal-screen .row .terminal-accent {
-  color: var(--terminal-symbol);
+.btn-insta:hover {
+  background-color: rgb(241, 180, 231);
+  box-shadow: 0px 8px 15px rgba(241, 180, 231, 0.5);
 }
 
-.terminal-screen .row img {
-  border-radius: 15px;
+.btn-discord:hover {
+  background-color: rgb(202, 178, 251);
+  box-shadow: 0px 8px 15px rgba(202, 178, 251, 0.5);
+}
+
+.container-footer {
+  padding: 30px 0 30px 0;
+  color: var(--overlay-color);
+  text-align: center;
 }
 
 /* Media Queries */
-@media (max-width: 520px) {
-  .terminal-screen,
-  .terminal-head {
-    margin: auto 1rem;
+@media (max-width: 600px) {
+  .container-btn {
+    grid-template-columns: auto;
   }
 }
 
-/* Animation */
-@keyframes fade {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
+@media (max-width: 390px) {
+  .container-profile h1 {
+    font-size: 28px;
   }
 }
