@@ -1,14 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
 :root {
-  --primary-color: #1e1e2e;
   --text-color: #1e1e2e;
-  --link-color: #f9e2af;
-  --accent-color: #eba0ac;
-  --terminal-symbol: #74c7ec;
-  --overlay-color: #6c7086ae;
-  --red: #f38ba8;
-  --green: #a6e3a1;
 }
 
 * {
@@ -19,9 +12,20 @@
   font-family: "Ubuntu Mono", monospace;
 }
 
+*::selection {
+  background-color: transparent;
+}
+
 a {
   text-decoration: none;
   color: var(--link-color);
+}
+
+h1::selection,
+h2::selection,
+p::selection {
+  background-color: var(--text-color);
+  color: white;
 }
 
 hr {
@@ -74,6 +78,7 @@ body {
   text-align: justify;
   margin-top: 10px;
 }
+
 .container-btn {
   display: grid;
   grid-template-columns: 1fr 1fr;
