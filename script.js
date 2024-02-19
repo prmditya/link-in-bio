@@ -1,7 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
+const modal = document.querySelector("dialog");
+
+document.addEventListener("DOMContentLoaded", function () {
   const text = "Thoriq Kusuma";
   const resetDelay = 3000; // Reset every 5 seconds
-  const typedText = document.getElementById('typed-text');
+  const typedText = document.getElementById("typed-text");
   let animationFrameId;
   let lastTime;
 
@@ -10,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
       lastTime = time;
     }
 
-    if (time - lastTime > 100) { // Menambahkan karakter setiap 100 milidetik
+    if (time - lastTime > 100) {
+      // Menambahkan karakter setiap 100 milidetik
       if (index < text.length) {
         typedText.innerHTML += text.charAt(index);
         index++;
@@ -25,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function startTyping() {
     index = 0;
-    typedText.innerHTML = '';
+    typedText.innerHTML = "";
     lastTime = null;
     addNextCharacter(performance.now());
   }
@@ -47,9 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
-
 function redirectTo(url) {
-  if (url == undefined) { alert("Coming Soon!!"); return; }
+  if (url == undefined) {
+    modal.showModal();
+    return;
+  }
   window.location.href = url;
 }
