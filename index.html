@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index" />
+    <meta name="x-robots-tag" content="index" />
     <meta
       name="description"
       content="Computer Engineering student passionate about coding and technology. Explore my skills in coding, photography, designing, and more."
@@ -16,6 +18,8 @@
     />
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
+    <!-- My Script -->
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -51,31 +55,35 @@
         <button
           class="btn-mail"
           onclick="redirectTo('mailto:thoriqk2@gmail.com')"
+          name="Mail Me!"
         >
           <i class="bi bi-envelope-at"></i> Mail
         </button>
         <button
           class="btn-linkedin"
           onclick="redirectTo('https://www.linkedin.com/in/paramaditya/')"
+          name="LinkedIn Profile"
         >
           <i class="bi bi-linkedin"></i> LinkedIn
         </button>
         <button
           class="btn-github"
           onclick="redirectTo('https://github.com/prmditya')"
+          name="GitHub Profile"
         >
           <i class="bi bi-github"></i> GitHub
         </button>
         <button
           class="btn-insta"
           onclick="redirectTo('https://www.instagram.com/riqparamaditya/')"
+          name="Instagram Profile"
         >
           <i class="bi bi-instagram"></i> Instagram
         </button>
-        <button class="btn-discord" onclick="redirectTo()">
+        <button class="btn-discord" onclick="redirectTo()" name="discord">
           <i class="bi bi-discord"></i> Discord
         </button>
-        <button class="btn-web" onclick="redirectTo()">
+        <button class="btn-web" onclick="redirectTo()" name="personal web">
           <i class="bi bi-browser-safari"></i> Personal Web
         </button>
       </div>
@@ -84,6 +92,5 @@
         &copy; 2024 Thoriq Kusuma, All Right Reserved
       </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
